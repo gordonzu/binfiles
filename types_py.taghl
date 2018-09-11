@@ -1,0 +1,3 @@
+syn keyword CTagsGlobalVariable bg z cmdargs y colors fg total x line bgmatch fgmatch
+syn keyword CTagsFunction Normalize ColorDist naive BestMatch Decompose
+

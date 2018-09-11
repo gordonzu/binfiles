@@ -1,0 +1,27 @@
+# #Usage:
+#    USER=<homedir username here>
+#    rsync -aP --exclude-from=rsync-homedir-excludes.txt /home/$USER/ /media/$USER/linuxbackup/home/$USER/
+
+gordonzu/.local/share/Trash
+gordonzu/.local/share/gvfs-metadata
+gordonzu/MEGA
+gordonzu/.cache
+gordonzu/.dbus
+gordonzu/.mozilla
+gordonzu/.npm
+gordonzu/.adobe
+gordonzu/.macromedia
+gordonzu/.xsession-errors
+
+#Google Chrome:
+gordonzu/.config/google-chrome/Default/Local Storage
+gordonzu/.config/google-chrome/Default/Session Storage
+gordonzu/.config/google-chrome/Default/History 
+
+#Local repositories 
+gordonzu/.gradle/caches
+gordonzu/.m2/repository
+
+#indexer
+gordonzu/.local/share/zeitgeist
+

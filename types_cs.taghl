@@ -1,0 +1,6 @@
+syn keyword CTagsField _empty aList _head cList bList _isEmpty _tail
+syn keyword CTagsProperty Count Head IsEmpty Tail Empty
+syn keyword CTagsMethod Insert Imlist List_is_not_null GetEnumerator ImListTest FromArrayInternal SinglyLinkedList TestList Prepend Init List_is_empty ToString FromArray FromEnumerable Main ImList Append
+syn keyword CTagsClass TestListTest SinglyLinkedList ImListTest ImList TestList ImlistTest MainClass Imlist
+syn keyword CTagsNamespace imlist thetest gordonz TheList
+

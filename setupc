@@ -1,0 +1,11 @@
+#!/usr/bin/ruby
+
+puts %x(mkdir #{ARGV[0]})
+puts %x(mkdir #{ARGV[0]}/build)
+puts %x(cp ~/bin/xxxTest.c #{ARGV[0]}/#{ARGV[1]}Test.c)
+puts %x(cp ~/bin/xxx.h #{ARGV[0]}/#{ARGV[1]}.h)
+puts %x(cp ~/bin/main.c #{ARGV[0]}/main.c)
+puts %x(cp ~/bin/CcMakeLists.txt #{ARGV[0]}/CMakeLists.txt)
+puts %x(cp ~/bin/inotifyrun #{ARGV[0]}/build/inotifyrun)
+puts %x(cp ~/bin/mybuild #{ARGV[0]}/build/mybuild)
+`cd #{ARGV[0]}`

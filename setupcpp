@@ -1,0 +1,16 @@
+#! /usr/bin/ruby
+
+puts %x(mkdir #{ARGV[0]})
+puts %x(mkdir #{ARGV[0]}/build)
+puts %x(cp ~/src/cpp/xxxTest.cpp #{ARGV[0]}/#{ARGV[1]}Test.cpp)
+puts %x(cp ~/src/cpp/xxx.h #{ARGV[0]}/#{ARGV[1]}.h)
+puts %x(cp ~/src/cpp/main.cpp #{ARGV[0]}/main.cpp)
+puts %x(cp ~/src/cpp/CMakeLists.txt #{ARGV[0]}/CMakeLists.txt)
+puts %x(cp ~/src/cpp/.gitignore #{ARGV[0]}/.gitignore)
+#puts %x(cp inotifyrun #{ARGV[0]}/build/inotifyrun)
+#puts %x(cp mybuild #{ARGV[0]}/build/mybuild)
+
+
+
+
+

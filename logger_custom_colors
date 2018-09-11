@@ -1,0 +1,5 @@
+AnsiColorLogger.ERROR_COLOR=2;31;40
+AnsiColorLogger.WARNING_COLOR=2;35;40
+AnsiColorLogger.INFO_COLOR=2;36;40
+AnsiColorLogger.VERBOSE_COLOR=2;32;40
+AnsiColorLogger.DEBUG_COLOR=2;34;40

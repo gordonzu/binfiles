@@ -1,0 +1,17 @@
+#!/usr/bin/ruby
+# first arg is project directory, second is file name
+
+puts %x(mkdir #{ARGV[0]})
+puts %x(mkdir #{ARGV[0]}/build)
+puts %x(cp /home/xulu/bin/cpp/templates/xxxTest.cpp #{ARGV[0]}/#{ARGV[1]}Test.cpp)
+puts %x(cp /home/xulu/bin/cpp/templates/xxx.h #{ARGV[0]}/#{ARGV[1]}.h)
+puts %x(cp /home/xulu/bin/cpp/templates/xxx.cpp #{ARGV[0]}/#{ARGV[1]}.cpp)
+puts %x(cp /home/xulu/bin/cpp/templates/main.cpp #{ARGV[0]}/main.cpp)
+puts %x(cp /home/xulu/bin/cpp/templates/CMakeLists.txt #{ARGV[0]}/CMakeLists.txt)
+puts %x(cp /home/xulu/bin/scripts/inotifyrun #{ARGV[0]}/build/inotifyrun)
+puts %x(cp /home/xulu/bin/scripts/mybuild #{ARGV[0]}/build/mybuild)
+
+
+
+
+

@@ -1,0 +1,11 @@
+ sudo find / -noleaf -wholename '/media' -prune \
+      -o -wholename '/cdrom' -prune \
+      -o -wholename '/timeshift' -prune \
+      -o -wholename '/media' -prune \
+      -o -wholename '/opt' -prune \
+      -o -wholename '/home/xulu/.dropbox' -prune \
+      -o -wholename '/home/xulu/Dropbox' -prune \
+      -o -wholename '/home/xulu/pictures' -prune \
+      -o -wholename '/home/xulu/backups' -prune \
+      -o -wholename '/home/xulu/docs' -prune \
+      -o -name $1 -type f -print

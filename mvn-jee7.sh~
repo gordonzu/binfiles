@@ -1,0 +1,22 @@
+#!/bin/bash
+
+companyName="org.xulu"
+appName=$1
+ 
+echo "====== MAVEN CREATION ================================"
+
+mvn archetype:generate \
+    -DinteractiveMode=false \
+    -DarchetypeArtifactId=maven-archetype-webapp \
+    -DgroupId="$companyName" \
+    -DartifactId="$appName"
+ 
+mkdir -p "$1/src/main/java/com/xulu"
+touch "$1/src/main/java/com/xulu/BLANK.java"
+rm -rf "$1/src/main/webapp/index.jsp"
+echo "====== DONE ========"
+#echo "$pdinfo" "diff -u \"$appName\"/pom.xml \"$samplePom\" "
+ 
+
+
+

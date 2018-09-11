@@ -1,0 +1,17 @@
+#! /bin/bash
+
+sublime="/home/xulu/.config/sublime-text-2/Packages/Theme - Default/Default.sublime-theme"
+sublime2="/home/xulu/.config/sublime-text-2/Packages/Theme - Default/Default.sublime-theme2"
+sublime_2="/home/xulu/.config/sublime-text-2/Packages/Theme - Default/Default.sublime-theme_2"
+
+if [ -e "$sublime2"  ];
+    then
+    mv "$sublime" "$sublime_2"
+    mv "$sublime2" "$sublime"
+else
+    mv "$sublime" "$sublime2"
+    mv "$sublime_2" "$sublime"
+fi
+
+
+

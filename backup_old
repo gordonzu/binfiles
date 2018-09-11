@@ -1,0 +1,23 @@
+now=`date +%m-%d-%Y`
+tar cvfj bin_$now.tar.bz2 /home/xulu/bin
+tar cvfj docs_$now.tar.bz2 /home/xulu/docs
+tar cvfj chromium_$now.tar.bz2 /home/xulu/.config/chromium/Default/Bookmarks
+tar cvfj dotvim_$now.tar.bz2 /home/xulu/.vim
+tar cvfj dotrvm_$now.tar.bz2 /home/xulu/.rvm
+tar cvfj dotgem_$now.tar.bz2 /home/xulu/.gem
+tar cvfj dotvimfiles_$now.tar.bz2 /home/xulu/.*vimrc
+tar cvfj dotbashfiles_$now.tar.bz2 /home/xulu/.bash*
+~/bin/rr /home/xulu/backups/*
+mv *.tar.bz2 /home/xulu/backups/.
+
+dpkg --get-selections > ~/bin/package.list
+sudo cp /etc/apt/sources.list ~/bin/sources.list
+sudo apt-key exportall > ~/bin/repo.keys
+rsync -ravz /home/xulu/ /media/xulu/Data/backup
+#sudo rsync -ravz /opt/ /media/xulu/Data/backups/opt
+
+#yesterday=`date --date='yesterday' +%m-%d-%Y`
+#rm /home/xulu/backups/*$yesterday*
+##  Reinstall now
+
+
