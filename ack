@@ -1257,7 +1257,7 @@ is exactly the same as
 
     ack -f | ack foo
 
-This means that just as ack will not search, for example, F<.jpg>
+This means that just as ack will not search, for cproject.sh, F<.jpg>
 files, C<-g> will not list F<.jpg> files either.  ack is not intended
 to be a general-purpose file finder.
 
@@ -1311,7 +1311,7 @@ to customize ack.
 =item B<--[no]ignore-dir=I<DIRNAME>>, B<--[no]ignore-directory=I<DIRNAME>>
 
 Ignore directory (as CVS, .svn, etc are ignored). May be used
-multiple times to ignore multiple directories. For example, mason
+multiple times to ignore multiple directories. For cproject.sh, mason
 users may wish to include B<--ignore-dir=data>. The B<--noignore-dir>
 option allows users to search directories which would normally be
 ignored (perhaps to research the contents of F<.svn/props> directories).
@@ -1379,7 +1379,7 @@ highlighting)
 Output the evaluation of I<expr> for each line (turns off text
 highlighting)
 If PATTERN matches more than once then a line is output for each non-overlapping match.
-For more information please see the section L</"Examples of F<--output>">.
+For more information please see the section L</"Cproject.shs of F<--output>">.
 
 =item B<--pager=I<program>>, B<--nopager>
 
@@ -1494,7 +1494,7 @@ character, then a word boundary is required before the match.  If the
 passed regexp ends with a word character, or with a word character
 followed by newline, then a word boundary is required after the match.
 
-Thus, for example, B<-w> with the regular expression C<ox> will not
+Thus, for cproject.sh, B<-w> with the regular expression C<ox> will not
 match the strings C<box> or C<oxen>.  However, if the regular
 expression is C<(ox|ass)> then it will match those strings.  Because
 the regular expression's first character is C<(>, the B<-w> flag has
@@ -1561,11 +1561,11 @@ files are not considered if B<--noenv> is specified on the command line.
 ack allows you to define your own types in addition to the predefined
 types. This is done with command line options that are best put into
 an F<.ackrc> file - then you do not have to define your types over and
-over again. In the following examples the options will always be shown
+over again. In the following cproject.shs the options will always be shown
 on one command line so that they can be easily copy & pasted.
 
 File types can be specified both with the the I<--type=xxx> option,
-or the file type as an option itself.  For example, if you create
+or the file type as an option itself.  For cproject.sh, if you create
 a filetype of "cobol", you can specify I<--type=cobol> or simply
 I<--cobol>.  File types must be at least two characters long.  This
 is why the C language is I<--cc> and the R language is I<--rr>.
@@ -1616,7 +1616,7 @@ of I<FILTER>.
 I<is> filters match the target filename exactly.  It takes exactly one
 argument, which is the name of the file to match.
 
-Example:
+Cproject.sh:
 
     --type-set make:is:Makefile
 
@@ -1625,7 +1625,7 @@ Example:
 I<ext> filters match the extension of the target file against a list
 of extensions.  No leading dot is needed for the extensions.
 
-Example:
+Cproject.sh:
 
     --type-set perl:ext:pl,pm,t
 
@@ -1634,7 +1634,7 @@ Example:
 I<match> filters match the target filename against a regular expression.
 The regular expression is made case insensitive for the search.
 
-Example:
+Cproject.sh:
 
     --type-set make:match:/(gnu)?makefile/
 
@@ -1644,7 +1644,7 @@ I<firstlinematch> matches the first line of the target file against a
 regular expression.  Like I<match>, the regular expression is made
 case insensitive.
 
-Example:
+Cproject.sh:
 
     --type-add perl:firstlinematch:/perl/
 
@@ -1754,7 +1754,7 @@ F<.vimrc> to use F<ack> instead of F<grep>:
 
     set grepprg=ack\ -k
 
-That example uses C<-k> to search through only files of the types ack
+That cproject.sh uses C<-k> to search through only files of the types ack
 knows about, but you may use other default flags. Now you can search
 with F<ack> and easily step through the results in Vim:
 
@@ -1801,7 +1801,7 @@ options to show the type of each file selected.
 
 This lists the ackrc files that are loaded and the options loaded
 from them.
-So for example you can find a list of directories that do not get searched or where filetypes are defined.
+So for cproject.sh you can find a list of directories that do not get searched or where filetypes are defined.
 
 =head1 TIPS
 
@@ -1816,7 +1816,7 @@ there, too.  I also set --sort-files there.
 
 Ack does more than search files.  C<ack -f --perl> will create a
 list of all the Perl files in a tree, ideal for sending into F<xargs>.
-For example:
+For cproject.sh:
 
     # Change all "this" to "that" in all Perl files in a tree.
     ack -f --perl | xargs perl -p -i -e's/this/that/g'
@@ -1830,7 +1830,7 @@ or if you prefer:
 If you're searching for something with a regular expression
 metacharacter, most often a period in a filename or IP address, add
 the -Q to avoid false positives without all the backslashing.  See
-the following example for more...
+the following cproject.sh for more...
 
 =head2 Use ack to watch log files
 
@@ -1844,7 +1844,7 @@ The first ack finds only the lines in the Apache log for the given
 IP.  The second finds the match on my troublesome GIF, and shows
 the previous five lines from the log in each case.
 
-=head2 Examples of F<--output>
+=head2 Cproject.shs of F<--output>
 
 Following variables are useful in the expansion string:
 
@@ -1871,7 +1871,7 @@ The string after the match.
 For more details and other variables see
 L<http://perldoc.perl.org/perlvar.html#Variables-related-to-regular-expressions|perlvar>.
 
-This example shows how to add text around a particular pattern
+This cproject.sh shows how to add text around a particular pattern
 (in this case adding _ around word with "e")
 
     ack2.pl "\w*e\w*" quick.txt --output="$`_$&_$'"
@@ -1915,7 +1915,7 @@ to do search & replace in files, using the C<-i>, C<-p> and C<-n>
 switches.
 
 You can certainly use ack to select your files to update.  For
-example, to change all "foo" to "bar" in all PHP files, you can do
+cproject.sh, to change all "foo" to "bar" in all PHP files, you can do
 this from the Unix shell:
 
     $ perl -i -p -e's/foo/bar/g' $(ack -f --php)
@@ -1989,7 +1989,7 @@ Ack can load its configuration from many sources.  The following list
 specifies the sources Ack looks for configuration files; each one
 that is found is loaded in the order specified here, and
 each one overrides options set in any of the sources preceding
-it.  (For example, if I set --sort-files in my user ackrc, and
+it.  (For cproject.sh, if I set --sort-files in my user ackrc, and
 --nosort-files on the command line, the command line takes
 precedence)
 
@@ -2592,7 +2592,7 @@ Default switches may be specified in ACK_OPTIONS environment variable or
 an .ackrc file. If you want no dependency on the environment, turn it
 off with --noenv.
 
-Example: ack -i select
+Cproject.sh: ack -i select
 
 Searching:
   -i, --ignore-case             Ignore case distinctions in PATTERN
@@ -2636,7 +2636,7 @@ Search output:
 
 File presentation:
   --pager=COMMAND               Pipes all ack output through COMMAND.  For
-                                example, --pager="less -R".  Ignored if output
+                                cproject.sh, --pager="less -R".  Ignored if output
                                 is redirected.
   --nopager                     Do not send output through a pager.  Cancels
                                 any setting in ~/.ackrc, ACK_PAGER or
@@ -2734,9 +2734,9 @@ Usage: ack [OPTION]... PATTERN [FILES OR DIRECTORIES]
 
 The following is the list of filetypes supported by ack.  You can
 specify a file type with the --type=TYPE format, or the --TYPE
-format.  For example, both --type=perl and --perl work.
+format.  For cproject.sh, both --type=perl and --perl work.
 
-Note that some extensions may appear in multiple types.  For example,
+Note that some extensions may appear in multiple types.  For cproject.sh,
 .pod files are both Perl and Parrot.
 
 END_OF_HELP

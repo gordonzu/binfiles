@@ -292,7 +292,7 @@ endfunction
 
 " {>2} Attribute overrides
 " Allow the user to override a specified attribute with another attribute.
-" For example, the default is to map 'italic' to 'underline' (since many
+" For cproject.sh, the default is to map 'italic' to 'underline' (since many
 " terminals cannot display italic text, and gvim itself will replace italics
 " with underlines where italicizing is impossible), and to replace 'sp' with
 " 'fg' (since terminals can't use one color for the underline and another for
